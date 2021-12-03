@@ -1,4 +1,4 @@
-import { Carousel, Row, Container, Col  } from 'react-bootstrap';
+import { Carousel  } from 'react-bootstrap';
 import './style.scss';
 
 import Ex1 from '../../images/ex1.jpg'

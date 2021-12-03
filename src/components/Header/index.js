@@ -6,7 +6,7 @@ const Header = () => {
         <header>
             <Navbar bg="ligh" expand="lg">
                 <Container fluid>
-                  <Navbar.Brand href="#">Home-Class</Navbar.Brand>
+                  <Navbar.Brand href="#">CTD - Educational</Navbar.Brand>
                   <Navbar.Toggle aria-controls="navbarScroll" />
                   <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -16,11 +16,11 @@ const Header = () => {
                     >
                       <Nav.Link href="#action1">Home</Nav.Link>
                       <NavDropdown title="Cursos" id="navbarScrollingDropdown">
-                        <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
+                        <NavDropdown.Item href="#action3">Front-end</NavDropdown.Item>
+                        <NavDropdown.Item href="#action4">Ux/Ui</NavDropdown.Item>
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="#action5">
-                          Something else here
+                        back-end
                         </NavDropdown.Item>
                       </NavDropdown>
                       <Nav.Link href="#">Sobre Nós</Nav.Link>
@@ -28,11 +28,11 @@ const Header = () => {
                     <Form className="d-flex">
                       <FormControl
                         type="search"
-                        placeholder="Search"
+                        placeholder="Pesquiser Cursos"
                         className="me-2"
                         aria-label="Search"
                       />
-                      <Button variant="outline-success">Search</Button>
+                      <Button variant="outline-success">Buscar</Button>
                     </Form>
                   </Navbar.Collapse>
                 </Container>

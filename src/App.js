@@ -1,6 +1,7 @@
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carrossel from './components/Carrossel';
+import Caard from './components/Card';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -11,6 +12,7 @@ function App() {
     <>
       <Header />
       <Carrossel />
+      <Caard />
       <Footer nomeCompanhia={nomeCompanhia}/>      
     </>
   );
