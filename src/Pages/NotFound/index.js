@@ -20,6 +20,7 @@ const NotFound = () => {
     <>
       <h2>404 nada por aqui</h2>
       <h3>Você será redirecionado em {timer}</h3>
+      
     </>
   )
 }

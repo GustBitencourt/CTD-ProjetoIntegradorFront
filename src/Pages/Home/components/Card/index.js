@@ -1,15 +1,12 @@
 import { Card, Button, CardGroup } from 'react-bootstrap';
 import './style.scss';
 
-import Ex1 from '../../images/ex1.jpg'
-import Ex2 from '../../images/ex2.jpg'
-import Ex3 from '../../images/ex3.jpg'
+import Ex1 from '../../../../images/ex1.jpg';
+import Ex2 from '../../../../images/ex2.jpg';
+import Ex3 from '../../../../images/ex3.jpg';
 
 
 const Caard = () => {
-
-
-
 
     return (
         <>

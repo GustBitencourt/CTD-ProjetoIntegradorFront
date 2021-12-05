@@ -9,10 +9,10 @@ const Footer = ({ nomeCompanhia }) => {
     }
 
     return (
-        <footer id="footer">
+        <footer id="footer" >
             <h3>{nomeCompanhia} - Todos os direitos reservados. &copy; Copyright {generateDateString()}</h3>
         </footer>
     )
 }
 
-export default Footer
+export default Footer;

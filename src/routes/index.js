@@ -1,17 +1,11 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import Home from '../pages/Home';
-import Repository from '../components/Repository';
-import NotFound from '../components/NotFound';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from '../Pages/Home';
+import NotFound from '../Pages/NotFound';
 
 const RouteList = () => (
-  <BrowserRouter>
-    <nav>
-      <Link to="/">Ir para a Home</Link><br />
-      <Link to="/lmaoclost/Aulas_CTD">Link para um repositório existente</Link>
-    </nav>
+  <BrowserRouter>    
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path=":repositoryOwner/:repositoryName" element={<Repository />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   </BrowserRouter>
