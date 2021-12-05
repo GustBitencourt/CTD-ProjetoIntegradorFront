@@ -12,7 +12,7 @@ const Box = () => {
     return (
         <>
             <Card className="text-center">
-                <Card.Header>Hoje</Card.Header>
+                <Card.Header>Destaque</Card.Header>
                 <Card.Body>
                     <Card.Title>Programador Full Stack 2022</Card.Title>
                     <Card.Text>
