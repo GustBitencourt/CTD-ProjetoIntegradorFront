@@ -7,7 +7,6 @@ import Card from './components/Card';
 import Card4 from './components/4-Card';
 
 const Home = () => {
-    const nomeCompanhia = 'CTD - Educational';
   
     return (
       <>
@@ -16,7 +15,7 @@ const Home = () => {
         <Box />
         <Card />
         <Card4 />
-        <Footer nomeCompanhia={nomeCompanhia}/>      
+        <Footer />      
       </>
     );
   }

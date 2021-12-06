@@ -1,6 +1,7 @@
 import './style.scss';
 
-const Footer = ({ nomeCompanhia }) => {
+const Footer = () => {
+    const nomeCompanhia = 'CTD - Educational';
 
     const generateDateString = () => {        
         const creationYear = '2021';

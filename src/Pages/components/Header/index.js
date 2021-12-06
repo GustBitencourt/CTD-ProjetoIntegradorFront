@@ -1,7 +1,9 @@
 import { Button, Container, Form, FormControl, Nav, NavDropdown, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './style.scss';
 
 const Header = () => {
+
     return(
         <header>
             <Navbar bg="ligh" expand="lg">
@@ -14,7 +16,11 @@ const Header = () => {
                       style={{ maxHeight: '100px' }}
                       navbarScroll
                     >
-                      <Nav.Link href="#action1">Home</Nav.Link>
+
+                      <Nav.Link> 
+                        <Link className="noneStyle" to="/categorias" >Categorias</Link> 
+                      </Nav.Link>                      
+
                       <NavDropdown title="Cursos" id="navbarScrollingDropdown">
                         <NavDropdown.Item href="#action3">Front-end</NavDropdown.Item>
                         <NavDropdown.Item href="#action4">Ux/Ui</NavDropdown.Item>

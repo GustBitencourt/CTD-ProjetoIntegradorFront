@@ -1,3 +1,14 @@
 .header{
     box-shadow: 0,5px 3px 5px 0,5px rgba(236, 18, 18, 0.75);
 }
+
+.noneStyle {
+    color: rgba(0,0,0,.55);
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.noneStyle:hover {
+    color:var(--bs-grey); 
+}
+
