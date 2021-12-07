@@ -31,23 +31,28 @@ const Caard = () => {
 
     return (
         <>
-    
+
             <div className="container">
-                {card.map(c => (
-                    <CardGroup>
-                        <Card style={{ width: '18rem' }} key={c.id}>
-                            <Card.Img variant="top" src={c.imagem} />
-                            <Card.Body>
-                                <Card.Title>{c.titulo}</Card.Title>
-                                <Card.Text>
-                                    {c.descricao}
-                                </Card.Text>
-                                <Button variant="primary">Comprar</Button>
-                            </Card.Body>
-                        </Card>
-                        
-                    </CardGroup>
-                ))}
+                {card.map((c, index) => {
+                        if (index < 3) {
+                            return (
+                                <CardGroup>
+                                    <Card style={{ width: '18rem' }} key={c.id}>
+                                        <Card.Img variant="top" src={c.imagem} />
+                                        <Card.Body>
+                                            <Card.Title>{c.titulo}</Card.Title>
+                                            <Card.Text>
+                                                {c.descricao}
+                                            </Card.Text>
+                                            <Button variant="primary">Comprar</Button>
+                                        </Card.Body>
+                                    </Card>
+
+                                </CardGroup>
+                            )
+                        }
+                        return <></>    
+                })}
             </div>
         </>
     )
