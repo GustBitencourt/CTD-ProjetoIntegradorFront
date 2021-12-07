@@ -3,6 +3,7 @@ import Swal from 'sweetalert2';
 import api from '../../services/index';
 import { useEffect, useState } from 'react';
 
+
 const Produtos = () => {
   const [produtos, setProdutos] = useState([]);
 
@@ -35,11 +36,6 @@ const Produtos = () => {
             <li>Descrição: {curso.descricao}</li>
             <li>Categoria: {curso.categoria.nome}</li>
             <Link to={`/cursos/${curso.titulo}`}>Mais detalhes sobre {curso.titulo}</Link>
-{/*             {produtos.map(({ id, titulo }) => {
-              return (
-                <Detalhes id={id} titulo={titulo} />
-              )
-            })} */}
           </ul>
         ))}
       </div>
