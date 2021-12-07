@@ -1,4 +1,4 @@
-import { Card, Button, CardGroup } from 'react-bootstrap';
+import { Card, Button, CardGroup, Container } from 'react-bootstrap';
 import './style.scss';
 import Swal from 'sweetalert2';
 import api from '../../../../services/index';
@@ -32,17 +32,17 @@ const Caard = () => {
     return (
         <>
 
-            <div className="container">
-                {card.map((c, index) => {
+            <Container  className="container">
+                {card.map((cards, index) => {
                         if (index < 3) {
                             return (
                                 <CardGroup>
-                                    <Card style={{ width: '18rem' }} key={c.id}>
-                                        <Card.Img variant="top" src={c.imagem} />
+                                    <Card style={{ width: '18rem' }} key={cards.id}>
+                                        <Card.Img variant="top" src={cards.imagem} />
                                         <Card.Body>
-                                            <Card.Title>{c.titulo}</Card.Title>
+                                            <Card.Title>{cards.titulo}</Card.Title>
                                             <Card.Text>
-                                                {c.descricao}
+                                                {cards.descricao}
                                             </Card.Text>
                                             <Button variant="primary">Comprar</Button>
                                         </Card.Body>
@@ -53,7 +53,7 @@ const Caard = () => {
                         }
                         return <></>    
                 })}
-            </div>
+            </Container>
         </>
     )
 }

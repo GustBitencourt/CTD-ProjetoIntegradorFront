@@ -32,6 +32,9 @@ const Header = () => {
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="#">Sobre Nós</Nav.Link>
+              <Nav.Link>
+                <Link className="noneStyle" to="/carrinho" >Carrinho</Link>
+              </Nav.Link>
             </Nav>
             <Form className="d-flex">
               <FormControl

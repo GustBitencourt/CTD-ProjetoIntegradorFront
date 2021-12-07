@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import api from '../../services/index';
 import { useEffect, useState } from 'react';
@@ -26,18 +26,23 @@ const Produtos = () => {
 
   return (
     <>
-    <div>
-    {produtos.map(d => (
-      <ul className="col-xl-4 col-lg-6 col-6" key={d.id}>
-        <li><img src={d.imagem} alt={`Foto do ${d.titulo}`} /></li>
-        <li>Titulo: {d.titulo}</li>
-        <li>Preço: {d.preco}</li>
-        <li>Descrição: {d.descricao}</li>
-        <li>Categoria: {d.categoria.nome}</li>
-      </ul>
-    
-    ))} 
-    </div>
+      <div>
+        {produtos.map(curso => (
+          <ul className="col-xl-4 col-lg-6 col-6" key={curso.id}>
+            <li><img src={curso.imagem} alt={`Foto do ${curso.titulo}`} /></li>
+            <li>Titulo: {curso.titulo}</li>
+            <li>Preço: {curso.preco}</li>
+            <li>Descrição: {curso.descricao}</li>
+            <li>Categoria: {curso.categoria.nome}</li>
+            <Link to={`/cursos/${curso.titulo}`}>Mais detalhes sobre {curso.titulo}</Link>
+{/*             {produtos.map(({ id, titulo }) => {
+              return (
+                <Detalhes id={id} titulo={titulo} />
+              )
+            })} */}
+          </ul>
+        ))}
+      </div>
     </>
   );
 
