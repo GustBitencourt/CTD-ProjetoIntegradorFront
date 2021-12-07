@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import Swal from 'sweetalert2';
 import api from '../../services/index';
 import { useEffect, useState } from 'react';
@@ -26,6 +27,11 @@ const Produtos = () => {
 
   return (
     <>
+      <Helmet>
+        <title>
+          CTD - Educational | Cursos
+        </title>
+      </Helmet>
       <div>
         {produtos.map(curso => (
           <ul className="col-xl-4 col-lg-6 col-6" key={curso.id}>

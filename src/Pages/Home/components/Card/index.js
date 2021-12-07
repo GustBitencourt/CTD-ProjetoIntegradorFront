@@ -4,10 +4,6 @@ import Swal from 'sweetalert2';
 import api from '../../../../services/index';
 import { useEffect, useState } from 'react';
 
-/* import Ex1 from '../../../../images/ex1.jpg'; */
-/* import Ex2 from '../../../../images/ex2.jpg';
-import Ex3 from '../../../../images/ex3.jpg'; */
-
 
 const Caard = () => {
     const [card, setCard] = useState([]);
