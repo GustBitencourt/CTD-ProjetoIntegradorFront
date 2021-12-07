@@ -8,11 +8,7 @@ const Home = () => {
   
     return (
       <>
-<<<<<<< HEAD
-        <Header />
         <Banner/>
-=======
->>>>>>> 53a71e5cf2ea7b463b8d1c5a06d1c7279b42da21
         <Carrossel />
         <Box />
         <Card />

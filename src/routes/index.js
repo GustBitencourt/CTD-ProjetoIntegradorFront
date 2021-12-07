@@ -14,7 +14,7 @@ const RouteList = () => (
       <Route path="/" element={<Home />} />
       <Route path="/categorias" element={<Categorias />} />
       <Route path="/cursos" element={<Produtos />} />
-      <Route path="cursos/:userName" element={<Detalhes />} />
+      <Route path="cursos/:cursoName" element={<Detalhes />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
     <Footer />

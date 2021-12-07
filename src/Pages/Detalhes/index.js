@@ -7,13 +7,13 @@ import api from '../../services/index';
 
 const Detalhes = () => {
   const [cursos, setCursos] = useState([]);
-  const { userName } = useParams();
+  const { cursoName } = useParams();
 
   useEffect(() => {
-    if (userName) {
-      getUserData({ tituloProduto: userName });
+    if (cursoName) {
+      getUserData({ tituloProduto: cursoName });
     };
-  }, [userName])
+  }, [cursoName])
 
   const getUserData = async ({ tituloProduto }) => {
     try {
