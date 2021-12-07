@@ -32,7 +32,7 @@ const Caard = () => {
     return (
         <>
 
-            <Container  className="container">
+            <Container  className="wrapper">
                 {card.map((cards, index) => {
                         if (index < 3) {
                             return (

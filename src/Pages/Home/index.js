@@ -1,5 +1,5 @@
 import Carrossel from './components/Carrossel';
-import Box from './components/Box';
+//import Box from './components/Box';
 import Card from './components/Card';
 import Card4 from './components/4-Card';
 import Banner from './components/Banner';
@@ -8,9 +8,8 @@ const Home = () => {
   
     return (
       <>
-        <Banner/>
+        <Banner />
         <Carrossel />
-        <Box />
         <Card />
         <Card4 />  
       </>

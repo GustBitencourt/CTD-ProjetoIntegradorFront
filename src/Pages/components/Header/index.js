@@ -1,6 +1,7 @@
-import { Button, Container, Form, FormControl, Nav, NavDropdown, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './style.scss';
+import Cart from '../../../images/cart.png';
 
 const Header = () => {
 
@@ -8,7 +9,7 @@ const Header = () => {
     <header>
       <Navbar bg="ligh" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#">CTD - Educational</Navbar.Brand>
+          <Navbar.Brand as={Link} to={"/"} >CTD - Educational</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -16,35 +17,16 @@ const Header = () => {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
+              <Nav.Link as={Link} to={"/categorias"}>Categorias</Nav.Link>
 
-              <Nav.Link>
-                <Link className="noneStyle" to="/categorias" >Categorias</Link>
-              </Nav.Link>
-
-              <NavDropdown title="Cursos" id="navbarScrollingDropdown" >
-                <NavDropdown.Item href="/cursos">Cursos</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action3">Front-end</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Ux/Ui</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Back-end
-                </NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link href="#">Sobre Nós</Nav.Link>
-              <Nav.Link>
-                <Link className="noneStyle" to="/carrinho" >Carrinho</Link>
-              </Nav.Link>
+              <Nav.Link as={Link} to={"/cursos"}>Cursos</Nav.Link>              
+              
+              <Nav.Link as={Link} to={"/cursos"}>Sobre Nós</Nav.Link>
             </Nav>
-            <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Pesquiser Cursos"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">Buscar</Button>
-            </Form>
+            
+            <Container className="containerCart">
+              <Nav.Link as={Link} to={"/carrinhos"}> <img src={Cart} alt="Carrinho de compras" title="Carrinho de compras" /></Nav.Link>
+            </Container>
           </Navbar.Collapse>
         </Container>
       </Navbar>

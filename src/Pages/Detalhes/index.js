@@ -1,4 +1,4 @@
-import { Container, Row, SelectGroup } from 'react-bootstrap';
+import { Container, Row, ListGroup } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -35,14 +35,15 @@ const Detalhes = () => {
         <title>CTD - Educational | {cursos[0] ? cursos[0].titulo : 'Home'}</title>
       </Helmet>
       {cursos.map(produtos => (
-        <ul className="col-xl-4 col-lg-6 col-6" key={produtos.id}>
+        <ListGroup as="ul" className="col-xl-4 col-lg-6 col-6" key={produtos.id}>
+
           <li><img src={produtos.imagem} alt={`Foto do ${produtos.titulo}`} title={produtos.titulo} /></li>
           <li>Titulo: {produtos.titulo}</li>
           <li>Preço: {produtos.preco}</li>
           <li>Descrição: {produtos.descricao}</li>
           <li>Categoria: {produtos.categoria.nome}</li>
 
-        </ul>
+        </ListGroup>
       ))}
     </>
   )
