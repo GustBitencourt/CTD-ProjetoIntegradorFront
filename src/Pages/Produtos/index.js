@@ -16,7 +16,7 @@ const Produtos = () => {
     let result = [];
     console.log(value);
     result = produtos.filter((data) => {
-      return data.title.search(value) !== -1;
+      return data.categoria.nome.search(value) !== -1;
     });
     setFilteredCategoria(result);
   }
