@@ -29,7 +29,7 @@ const Produtos = () => {
       <div>
         {produtos.map(curso => (
           <ul className="col-xl-4 col-lg-6 col-6" key={curso.id}>
-            <li><img src={curso.imagem} alt={`Foto do ${curso.titulo}`} /></li>
+            <li><img src={curso.imagem} alt={`Foto do ${curso.titulo}`} title={curso.titulo} /></li>
             <li>Titulo: {curso.titulo}</li>
             <li>Preço: {curso.preco}</li>
             <li>Descrição: {curso.descricao}</li>
