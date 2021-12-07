@@ -1,6 +1,7 @@
 .banner {
-    padding-top: 48px;
+    padding-top: 30px;
     height: 100vh;
+    margin-bottom: 18px;
 
     .banner-top {
         display: flex;
@@ -10,11 +11,13 @@
     
     .picture {
         height: 600px;
+        width: 100%;
     }
     
     .banner-info {
         font-size: 25px;
         padding-left: 30px;
+        width:40%
     }
     
     .button {

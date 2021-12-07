@@ -1,10 +1,10 @@
 import React from 'react'
 import './banner.scss'
-import {Button} from 'react-bootstrap'
+import {Button, Container} from 'react-bootstrap'
 import bannerImg from '../../../../images/bannerImg.jpg'
 function Banner() {
     return (
-        <div className="banner">
+        <Container className="banner">
             
             <div className='banner-top'>
                 <div className="banner-info">
@@ -19,7 +19,7 @@ function Banner() {
                     <img src={bannerImg} className="picture" alt="Banner do site"/>
                 </div>
             </div>
-        </div>
+        </Container>
     )
 }
 
