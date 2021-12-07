@@ -31,6 +31,7 @@ const Caard = () => {
 
     return (
         <>
+    
             <div className="container">
                 {card.map(c => (
                     <CardGroup>
