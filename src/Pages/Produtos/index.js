@@ -3,12 +3,23 @@ import { Helmet } from 'react-helmet';
 import Swal from 'sweetalert2';
 import api from '../../services/index';
 import { useEffect, useState } from 'react';
-import { Container, Col, FormControl, Form, Row } from 'react-bootstrap';
+import { Container,  Form} from 'react-bootstrap';
 
 
 
 const Produtos = () => {
   const [produtos, setProdutos] = useState([]);
+  const [filteredCategoria, setFilteredCategoria] = useState(produtos);
+
+  const handleSearch = (event) => {
+    let value = event.target.value.toLowerCase();
+    let result = [];
+    console.log(value);
+    result = produtos.filter((data) => {
+      return data.title.search(value) !== -1;
+    });
+    setFilteredCategoria(result);
+  }
 
   useEffect(() => {
     async function loadProdutos() {
@@ -16,6 +27,7 @@ const Produtos = () => {
         const response = await api.get(`/produtos`);
         console.log(response.data);
         setProdutos(response.data);
+        setFilteredCategoria(response.data);
       } catch (error) {
         Swal.fire({
           title: error.response.status,
@@ -25,7 +37,7 @@ const Produtos = () => {
       }
     }
     loadProdutos();
-  }, [])  
+  }, [])
 
 
   return (
@@ -36,7 +48,7 @@ const Produtos = () => {
         </title>
       </Helmet>
 
-      
+
 
       <Container>
         <Container>
@@ -44,12 +56,15 @@ const Produtos = () => {
         </Container>
 
 
-        <Form.Select aria-label="Default select example">
-          <option>Escolha a Categoria</option>
-          <option value="frontend">frontend</option>
-          <option value="backend">backend</option>
-          <option value="desing">desing</option>
-        </Form.Select>
+
+        {filteredCategoria.map((value, index) => {
+          return (
+            <Form.Select aria-label="Default select example" key={value.id} onChange={(event) => handleSearch(event)}>
+              <option>Escolha a Categoria</option>
+              <option >{value.categoria.nome}</option>
+            </Form.Select>
+          )
+        })}
       </Container>
 
 
