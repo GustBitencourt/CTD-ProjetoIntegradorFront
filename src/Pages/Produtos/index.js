@@ -41,9 +41,9 @@ const Produtos = () => {
           <h2>Cursos</h2>
         </Container>
         <Form.Select aria-label="Default select example">
-          <option value="">frontend</option>
-          <option value="">backend</option>
-          <option value="">desing</option>
+          <option value="frontend">frontend</option>
+          <option value="backend">backend</option>
+          <option value="desing">desing</option>
         </Form.Select>
       </Container>
       <Container>

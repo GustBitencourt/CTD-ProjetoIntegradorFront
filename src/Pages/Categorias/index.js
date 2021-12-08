@@ -34,7 +34,7 @@ const Categorias = () => {
           /*       <ul className="col-xl-4 col-lg-6 col-6" key={d.id}>
                   <li>Nome: {d.nome}</li>
                 </ul> */
-          <Button variant="primary" as={Link} to={`/${nomeCategoria.nome}`} className="button" key={nomeCategoria.id}>
+          <Button variant="primary" as={Link} to={`/categorias/${nomeCategoria.nome}`} className="button" key={nomeCategoria.id}>
            Categoria : {nomeCategoria.nome}
           </Button>
         ))}

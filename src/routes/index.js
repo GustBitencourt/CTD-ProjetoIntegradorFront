@@ -17,7 +17,7 @@ const RouteList = () => (
       <Route path="/cursos" element={<Produtos />} />
       <Route path="cursos/:cursoName" element={<Detalhes />} />
       <Route path="*" element={<NotFound />} />
-      <Route path="/filtro" element={<Filtros />} />
+      <Route path="categorias/:categoriaName" element={<Filtros />} />
     </Routes>
     <Footer />
   </BrowserRouter>
