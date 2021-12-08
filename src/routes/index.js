@@ -6,6 +6,7 @@ import Categorias from '../Pages/Categorias';
 import NotFound from '../Pages/NotFound';
 import Produtos from '../Pages/Produtos';
 import Detalhes from '../Pages/Detalhes';
+import Filtros from '../Pages/Filtros';
 
 const RouteList = () => (
   <BrowserRouter>
@@ -16,6 +17,7 @@ const RouteList = () => (
       <Route path="/cursos" element={<Produtos />} />
       <Route path="cursos/:cursoName" element={<Detalhes />} />
       <Route path="*" element={<NotFound />} />
+      <Route path="/filtro" element={<Filtros />} />
     </Routes>
     <Footer />
   </BrowserRouter>
