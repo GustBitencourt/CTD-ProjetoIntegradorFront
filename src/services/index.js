@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:8080'
+  baseURL: 'http://turma3g2commerce-env.eba-gt5mkcww.us-east-1.elasticbeanstalk.com'
+  /* https://dhcommerce.herokuapp.com/ */
 });
 
 export default api;

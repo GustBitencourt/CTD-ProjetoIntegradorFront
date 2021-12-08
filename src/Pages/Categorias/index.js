@@ -4,6 +4,8 @@ import api from '../../services/index';
 import { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { Container} from 'react-bootstrap';
+
 
 const Categorias = () => {
   const [categoria, setCategoria] = useState([]);
@@ -28,7 +30,6 @@ const Categorias = () => {
 
   return (
     <>
-
       <div>
         {categoria.map(nomeCategoria => (
           /*       <ul className="col-xl-4 col-lg-6 col-6" key={d.id}>
