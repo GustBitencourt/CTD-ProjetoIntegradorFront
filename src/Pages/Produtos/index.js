@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Swal from 'sweetalert2';
 import api from '../../services/index';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext , useParams} from 'react';
 import { Container, Col, Form, ListGroup } from 'react-bootstrap';
-
+import { CursoContext } from '../../contexts/CursoContext'
 
 const Produtos = () => {
-  const [produtos, setProdutos] = useState([]);
+  const [produtos, setProdutos] = useState([]);  
 
   useEffect(() => {
     async function loadProdutos() {

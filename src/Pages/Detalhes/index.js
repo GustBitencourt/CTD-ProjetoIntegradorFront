@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import {  ListGroup } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
 import { useEffect, useState, useContext } from 'react';
@@ -11,7 +12,8 @@ import { CursoContext } from '../../contexts/CursoContext'
 const Detalhes = () => {
   const [cursos, setCursos] = useState([]);
   const { cursoName } = useParams();
-  const { addCurso } = useContext(CursoContext);
+  const { addCurso } = useContext(CursoContext); 
+
 
   useEffect(() => {
     if (cursoName) {
