@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react';
 import { Container, Col, Form, ListGroup } from 'react-bootstrap';
 
 
-
 const Produtos = () => {
   const [produtos, setProdutos] = useState([]);
 

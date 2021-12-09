@@ -1,7 +1,8 @@
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './style.scss';
-import Cart from '../../images/cart.png';
+/* import Cart from '../../images/cart.png'; */
+import CursoList from './com/CursoList';
 
 const Header = () => {
 
@@ -19,14 +20,16 @@ const Header = () => {
             >
               <Nav.Link as={Link} to={"/categorias"}>Categorias</Nav.Link>
 
-              <Nav.Link as={Link} to={"/cursos"}>Cursos</Nav.Link>              
-              
+              <Nav.Link as={Link} to={"/cursos"}>Cursos</Nav.Link>
+
               <Nav.Link as={Link} to={"/cursos"}>Sobre Nós</Nav.Link>
             </Nav>
-            
-            <Container className="containerCart">
-              <Nav.Link as={Link} to={"/carrinhos"}> <img src={Cart} alt="Carrinho de compras" title="Carrinho de compras" /></Nav.Link>
-            </Container>
+
+            <Nav>
+              <NavDropdown title="Carrinho" id="basic-nav-dropdown">
+                <CursoList />
+              </NavDropdown>
+            </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
