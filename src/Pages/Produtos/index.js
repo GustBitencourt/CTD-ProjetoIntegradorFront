@@ -10,7 +10,6 @@ import { Container, Form } from 'react-bootstrap';
 const Produtos = () => {
   const [produtos, setProdutos] = useState([]);
 
-
   useEffect(() => {
     async function loadProdutos() {
       try {
@@ -25,6 +24,7 @@ const Produtos = () => {
         })
       }
     }
+    
     loadProdutos();
   }, [])
 

@@ -1,27 +1,22 @@
 .banner {
-    margin-bottom: 18px;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
 
-    .banner-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .picture {
-        height: 600px;
-        width: 100%;
-    }
-    
     .banner-info {
         font-size: 25px;
-        padding-left: 30px;
         width:40%
     }
+
+    .picture {
+        width: 100%;
+    }  
     
     .button {
         margin-top: 20px;
         width: 300px;
-        padding: 20px;
         border-radius: 10px;
     }
     

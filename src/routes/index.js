@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from '../Pages/components/Header';
-import Footer from '../Pages/components/Footer';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Home from '../Pages/Home';
 import Categorias from '../Pages/Categorias';
 import NotFound from '../Pages/NotFound';
