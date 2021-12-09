@@ -11,11 +11,11 @@ const Detalhes = () => {
 
   useEffect(() => {
     if (cursoName) {
-      getUserData({ tituloProduto: cursoName });
+      getCursoData({ tituloProduto: cursoName });
     };
   }, [cursoName])
 
-  const getUserData = async ({ tituloProduto }) => {
+  const getCursoData = async ({ tituloProduto }) => {
     try {
       const response = await api.get(`/produtos/${tituloProduto}`);
       setCursos(response.data);
