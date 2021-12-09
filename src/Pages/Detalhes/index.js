@@ -1,13 +1,17 @@
 import {  ListGroup } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import api from '../../services/index';
+import { Button } from 'react-bootstrap';
+import { CursoContext } from '../../contexts/CursoContext'
+
 
 const Detalhes = () => {
   const [cursos, setCursos] = useState([]);
   const { cursoName } = useParams();
+  const { addCurso } = useContext(CursoContext);
 
   useEffect(() => {
     if (cursoName) {
@@ -20,6 +24,7 @@ const Detalhes = () => {
       const response = await api.get(`/produtos/${tituloProduto}`);
       setCursos(response.data);
       console.log(response.data)
+      addCurso(response.data[0])
     } catch (error) {
       Swal.fire({
         title: error.response.status,
@@ -43,7 +48,7 @@ const Detalhes = () => {
           <ListGroup.Item as="li">Preço: {produtos.preco}</ListGroup.Item>
           <ListGroup.Item as="li">Descrição: {produtos.descricao}</ListGroup.Item>
           <ListGroup.Item as="li">Categoria: {produtos.categoria.nome}</ListGroup.Item>
-
+          <Button>Adicionar ao Carrinho</Button>
         </ListGroup>
       ))}
     </>
