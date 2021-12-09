@@ -40,7 +40,6 @@ const Caard = () => {
                                             <Card.Text>
                                                 {cards.descricao}
                                             </Card.Text>
-                                            <Button variant="primary">Comprar</Button>
                                         </Card.Body>
                                     </Card>
 
