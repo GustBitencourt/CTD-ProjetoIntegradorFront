@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Carousel, Card, Col, Row, Button, CardGroup } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 import Swal from 'sweetalert2';
 import api from '../../../../services';
 import './style.scss';
@@ -27,12 +27,13 @@ const Carrossel = () => {
 
   return (
     <>
-      <Carousel>
+      <Carousel variant="dark">
         {produtos.map(curso => {
           return (
             <Carousel.Item interval={1500} key={curso.id}>
               <img
                 className="d-block w-100 h-90"
+                id="image"
                 src={curso.imagem}
                 alt={`Foto do ${curso.titulo}`}
                 title={curso.titulo}
