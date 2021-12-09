@@ -1,0 +1,15 @@
+#sectionCategoria {
+    height: 100vh    
+}
+
+#colButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .button {
+        width: 12rem;
+        margin: 1rem;
+        border-radius: 1rem;
+    }
+}

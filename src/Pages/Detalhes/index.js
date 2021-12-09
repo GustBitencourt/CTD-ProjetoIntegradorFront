@@ -34,14 +34,15 @@ const Detalhes = () => {
       <Helmet>
         <title>CTD - Educational | {cursos[0] ? cursos[0].titulo : 'Home'}</title>
       </Helmet>
+      
       {cursos.map(produtos => (
         <ListGroup as="ul" className="col-xl-4 col-lg-6 col-6" key={produtos.id}>
 
-          <li><img src={produtos.imagem} alt={`Foto do ${produtos.titulo}`} title={produtos.titulo} /></li>
-          <li>Titulo: {produtos.titulo}</li>
-          <li>Preço: {produtos.preco}</li>
-          <li>Descrição: {produtos.descricao}</li>
-          <li>Categoria: {produtos.categoria.nome}</li>
+          <ListGroup.Item as="li"><img src={produtos.imagem} alt={`Foto do ${produtos.titulo}`} title={produtos.titulo} /></ListGroup.Item>
+          <ListGroup.Item as="li">Titulo: {produtos.titulo}</ListGroup.Item>
+          <ListGroup.Item as="li">Preço: {produtos.preco}</ListGroup.Item>
+          <ListGroup.Item as="li">Descrição: {produtos.descricao}</ListGroup.Item>
+          <ListGroup.Item as="li">Categoria: {produtos.categoria.nome}</ListGroup.Item>
 
         </ListGroup>
       ))}

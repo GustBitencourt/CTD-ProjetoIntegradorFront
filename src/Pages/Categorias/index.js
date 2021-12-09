@@ -1,10 +1,9 @@
-
 import Swal from 'sweetalert2';
 import api from '../../services/index';
 import { useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import { Container} from 'react-bootstrap';
+import { Button, Container, Col} from 'react-bootstrap';
+import './style.scss';
 
 
 const Categorias = () => {
@@ -30,16 +29,21 @@ const Categorias = () => {
 
   return (
     <>
-      <div>
-        {categoria.map(nomeCategoria => (
-          /*       <ul className="col-xl-4 col-lg-6 col-6" key={d.id}>
-                  <li>Nome: {d.nome}</li>
-                </ul> */
-          <Button variant="primary" as={Link} to={`/categorias/${nomeCategoria.nome}`} className="button" key={nomeCategoria.id}>
-           Categoria : {nomeCategoria.nome}
-          </Button>
-        ))}
-      </div>
+      <section id="sectionCategoria">
+        <Container sm={{span:10, offset: 1}}>
+          <Col id="colButton">
+            <h2>Categorias</h2>
+            {categoria.map(nomeCategoria => (
+              /*       <ul className="col-xl-4 col-lg-6 col-6" key={d.id}>
+                      <li>Nome: {d.nome}</li>
+                    </ul> */
+              <Button variant="primary" as={Link} to={`/categorias/${nomeCategoria.nome}`} className="button" key={nomeCategoria.id}>
+               {nomeCategoria.nome}
+              </Button>
+            ))}
+          </Col>
+        </Container>
+      </section>
     </>
   );
 
