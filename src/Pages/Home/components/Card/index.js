@@ -1,4 +1,4 @@
-import { Card, Button, CardGroup, Container } from 'react-bootstrap';
+import { Card, CardGroup, Container } from 'react-bootstrap';
 import './style.scss';
 import Swal from 'sweetalert2';
 import api from '../../../../services/index';
@@ -40,7 +40,6 @@ const Caard = () => {
                                             <Card.Text>
                                                 {cards.descricao}
                                             </Card.Text>
-                                            <Button variant="primary">Comprar</Button>
                                         </Card.Body>
                                     </Card>
 

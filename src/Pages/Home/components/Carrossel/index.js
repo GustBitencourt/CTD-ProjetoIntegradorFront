@@ -1,220 +1,57 @@
-import { Carousel, Card, Button, CardGroup } from 'react-bootstrap';
+import { useState, useEffect } from 'react'
+import { Carousel } from 'react-bootstrap';
+import Swal from 'sweetalert2';
+import api from '../../../../services';
 import './style.scss';
 
-import Ex1 from '../../../../images/ex1.jpg';
-import Ex2 from '../../../../images/ex2.jpg';
-import Ex3 from '../../../../images/ex3.jpg';
-
-
 const Carrossel = () => {
+  const [produtos, setProdutos] = useState([]);
 
+  useEffect(() => {
+    async function loadProdutos() {
+      try {
+        const response = await api.get(`/produtos`);
+        console.log(response.data);
+        setProdutos(response.data);
+      } catch (error) {
+        Swal.fire({
+          title: error.response.status,
+          icon: 'error',
+          text: error.response.data.message
+        })
+      }
+    }
+
+    loadProdutos();
+  }, [])
 
   return (
     <>
-      <Carousel className="d-flex w-100">
-
-        <Carousel.Item interval={1500}>
-          <CardGroup>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={Ex1} />
-
-              <Card.ImgOverlay>
-                <Card.Title>
-                  
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />Card title</Card.Title>
-                <Card.Text>
-
-                  This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                </Card.Text>
-                <Button variant="primary">Comprar</Button>
-              </Card.ImgOverlay>
-
-            </Card>
-
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={Ex2} />
-              <Card.ImgOverlay>
-                <Card.Title>
-                 
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />Card title</Card.Title>
-                <Card.Text>
-
-                  This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                </Card.Text>
-                <Button variant="primary">Comprar</Button>
-              </Card.ImgOverlay>
-              
-            </Card>
-
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={Ex3} />
-              <Card.ImgOverlay>
-                <Card.Title>
-                 
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />Card title</Card.Title>
-                <Card.Text>
-
-                  This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                </Card.Text>
-                <Button variant="primary">Comprar</Button>
-              </Card.ImgOverlay>
-             
-            </Card>
-          </CardGroup>
-        </Carousel.Item>
-
-        <Carousel.Item interval={1500}>
-          <CardGroup>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={Ex1} />
-
-              <Card.ImgOverlay>
-                <Card.Title>
-                  
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />Card title</Card.Title>
-                <Card.Text>
-
-                  This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                </Card.Text>
-                <Button variant="primary">Comprar</Button>
-              </Card.ImgOverlay>
-
-            </Card>
-
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={Ex2} />
-              <Card.ImgOverlay>
-                <Card.Title>
-                  
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />Card title</Card.Title>
-                <Card.Text>
-
-                  This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                </Card.Text>
-                <Button variant="primary">Comprar</Button>
-              </Card.ImgOverlay>
-              
-            </Card>
-
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={Ex3} />
-              <Card.ImgOverlay>
-                <Card.Title>
-                 
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />Card title</Card.Title>
-                <Card.Text>
-
-                  This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                </Card.Text>
-                <Button variant="primary">Comprar</Button>
-              </Card.ImgOverlay>
-             
-            </Card>
-          </CardGroup>
-        </Carousel.Item>
-
-        <Carousel.Item interval={1500}>
-          <CardGroup>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={Ex1} />
-
-              <Card.ImgOverlay>
-                <Card.Title>
-                  
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />Card title</Card.Title>
-                <Card.Text>
-
-                  This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                </Card.Text>
-                <Button variant="primary">Comprar</Button>
-              </Card.ImgOverlay>
-
-            </Card>
-
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={Ex2} />
-              <Card.ImgOverlay>
-                <Card.Title>
-                 
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />Card title</Card.Title>
-                <Card.Text>
-
-                  This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                </Card.Text>
-                <Button variant="primary">Comprar</Button>
-              </Card.ImgOverlay>
-              
-            </Card>
-
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={Ex3} />
-              <Card.ImgOverlay>
-                <Card.Title>
-                  
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />Card title</Card.Title>
-                <Card.Text>
-
-                  This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                </Card.Text>
-                <Button variant="primary">Comprar</Button>
-              </Card.ImgOverlay>
-             
-            </Card>
-          </CardGroup>
-        </Carousel.Item>
-
-        
+      <Carousel variant="dark">
+        {produtos.map(curso => {
+          return (
+            <Carousel.Item interval={1500} key={curso.id}>
+              <img
+                className="d-block w-100 h-90"
+                id="image"
+                src={curso.imagem}
+                alt={`Foto do ${curso.titulo}`}
+                title={curso.titulo}
+              />
+              <Carousel.Caption>
+                <h3>{curso.titulo}</h3>
+                <p>{curso.descricao}</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          )})}
       </Carousel>
-
-
     </>
+
   )
 }
 
 export default Carrossel;
 
+/*
+              
+*/

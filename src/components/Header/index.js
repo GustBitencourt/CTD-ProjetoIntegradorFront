@@ -10,7 +10,7 @@ const Header = () => {
     <header>
       <Navbar bg="ligh" expand="lg">
         <Container fluid>
-          <Navbar.Brand as={Link} to={"/"} >CTD - Educational</Navbar.Brand>
+          <Navbar.Brand as={Link} to={"/"} ><h1>CTD - Educational</h1></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -18,7 +18,7 @@ const Header = () => {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Nav.Link as={Link} to={"/categorias"}>Categorias</Nav.Link>
+              <Nav.Link className="navs" as={Link} to={"/categorias"}>Categorias</Nav.Link>
 
               <Nav.Link as={Link} to={"/cursos"}>Cursos</Nav.Link>
 
