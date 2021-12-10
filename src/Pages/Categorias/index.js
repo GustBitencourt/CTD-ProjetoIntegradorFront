@@ -26,6 +26,11 @@ const Categorias = () => {
     loadCategoria();
   }, [])
 
+  const firstCapitalize = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+  
+
 
   return (
     <>
@@ -37,8 +42,8 @@ const Categorias = () => {
               /*       <ul className="col-xl-4 col-lg-6 col-6" key={d.id}>
                       <li>Nome: {d.nome}</li>
                     </ul> */
-              <Button variant="primary" as={Link} to={`/categorias/${nomeCategoria.nome}`} className="button" key={nomeCategoria.id}>
-               {nomeCategoria.nome}
+              <Button id="button__categorias" as={Link} to={`/categorias/${nomeCategoria.nome}`} className="button" key={nomeCategoria.id}>
+               {firstCapitalize(nomeCategoria.nome)}
               </Button>
             ))}
           </Col>
