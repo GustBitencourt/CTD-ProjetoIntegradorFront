@@ -7,6 +7,7 @@ import Sobrenos from '../Pages/Sobre';
 import NotFound from '../Pages/NotFound';
 import Produtos from '../Pages/Produtos';
 import Detalhes from '../Pages/Detalhes';
+import Carrinho from '../Pages/Carrinho';
 import Filtros from '../Pages/Filtros';
 import CursoContextProvider from '../contexts/CursoContext';
 
@@ -17,8 +18,9 @@ const RouteList = () => (
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/categorias" element={<Categorias />} />
-        <Route path="/cursos" element={<Produtos />} />
-        <Route path="cursos/:cursoName" element={<Detalhes />} />
+        <Route path="/curso" element={<Produtos />} />
+        <Route path="curso/:cursoName" element={<Detalhes />} />
+        <Route path="/carrinho" element={<Carrinho />} />
         <Route path="*" element={<NotFound />} />
         <Route path="categorias/:categoriaName" element={<Filtros />} />
         <Route path="/sobre" element={<Sobrenos />} />
