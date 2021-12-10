@@ -29,7 +29,7 @@ const Carrossel = () => {
     <>
       <Container className="my-5">
         <h2>Em Destaque</h2>
-        <Carousel variant="dark">
+        <Carousel variant="dark" controls={false}>
           <Carousel.Item interval={1500}>
             <CardGroup className="container__card__carrossel">
               {produtos.map(curso => {

@@ -41,6 +41,7 @@ const Filtros = () => {
             <ListGroup.Item as="li">Preço: {categorias.preco}</ListGroup.Item>
             <ListGroup.Item as="li">Descrição: {categorias.descricao}</ListGroup.Item>
             <ListGroup.Item as="li">Categoria: {categorias.categoria.nome}</ListGroup.Item>
+            
           </ListGroup>
         ))}
       </CardGroup>
