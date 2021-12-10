@@ -26,7 +26,7 @@ const Header = () => {
             </Nav>
 
             <Nav>
-              <NavDropdown title="Carrinho" bg="White" id="basic-nav-dropdown">
+              <NavDropdown title="Carrinho" bg="White" id="basic-nav-dropdown" >
                 <CursoList />
               </NavDropdown>
             </Nav>

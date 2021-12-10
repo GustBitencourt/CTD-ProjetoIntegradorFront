@@ -5,6 +5,7 @@ import { useParams} from 'react-router-dom';
 import { CursoContext } from '../../contexts/CursoContext';
 import Swal from 'sweetalert2';
 import api from '../../services/index';
+import './style.scss'
 
 const Carrinho = () => {
   const [curso, setCursos] = useState([]);
