@@ -2,14 +2,14 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Swal from 'sweetalert2';
 import api from '../../services/index';
-import { useEffect, useState, useContext} from 'react';
-import { Container, Col,ListGroup, CardGroup } from 'react-bootstrap';
-import {CursoContext } from '../../contexts/CursoContext'
+import { useEffect, useState, useContext } from 'react';
+import { Container, Col, ListGroup, CardGroup, Card, Button } from 'react-bootstrap';
+import { CursoContext } from '../../contexts/CursoContext'
 import './style.scss';
 
 const Produtos = () => {
   const [produtos, setProdutos] = useState([]);
-  
+
 
   useEffect(() => {
     async function loadProdutos() {
@@ -25,7 +25,7 @@ const Produtos = () => {
         })
       }
     }
-    
+
     loadProdutos();
   }, [])
 
@@ -39,20 +39,22 @@ const Produtos = () => {
       </Helmet>
       <Container>
         <Col >
-        <CardGroup>
-          {produtos.map(curso => (
-            <ListGroup as="ul" className=" col-xl-4 col-lg-6 col-6" key={curso.id}>
-
-              <ListGroup.Item as="li"><img className="Curso" src={curso.imagem} alt={`Foto do ${curso.titulo}`} title={curso.titulo} /></ListGroup.Item>
-              <ListGroup.Item as="li">Titulo: {curso.titulo}</ListGroup.Item>
-              <ListGroup.Item as="li">Preço: {curso.preco}</ListGroup.Item>
-              <ListGroup.Item as="li">Descrição: {curso.descricao}</ListGroup.Item>
-              <ListGroup.Item as="li">Categoria: {curso.categoria.nome}</ListGroup.Item>
-              <Link to={`/curso/${curso.titulo}`}>Mais detalhes sobre {curso.titulo}</Link>
-
-            </ListGroup>
-          ))}
-        </CardGroup>  
+          <CardGroup>
+            <Container className="curso__container">
+              {produtos.map(curso => (
+                <Card style={{ width: '18rem', margin: '20px' }} key={curso.id}>
+                  <Card.Img variant="top" src={curso.imagem} alt={curso.titulo} title={curso.titulo} />
+                  <Card.Body className="align-center">
+                    <Card.Title>{curso.titulo}</Card.Title>
+                    <Card.Text>
+                      {curso.descricao}
+                    </Card.Text>
+                    <Button as={Link} to={`/carrinho`} variant="success" className="btn" >Adicionar ao Carrinho</Button>
+                  </Card.Body>
+                </Card>
+              ))}
+            </Container>
+          </CardGroup>
         </Col>
       </Container>
     </>

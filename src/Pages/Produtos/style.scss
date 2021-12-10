@@ -1,14 +1,5 @@
-#selectContainer {
-  width: 20%;
-}
-.flex{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.Curso {
-  width: 270px;
-  height: 200px;
+.curso__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
