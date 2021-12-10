@@ -36,13 +36,13 @@ const Carrossel = () => {
                 return (
                   <>
                   <Card  key={curso.id}>
-                    <Card.Img variant="top" src={curso.imagem} alt={curso.title} title={curso.title} />
-                    <Card.Body>
+                  <Card.Body>
                       <Card.Title>{curso.titulo}</Card.Title>
                       <Card.Text>
                         {curso.descricao}
                       </Card.Text>
                     </Card.Body>
+                    <Card.Img variant="top" src={curso.imagem} alt={curso.title} title={curso.title} />
                   </Card>
                     </>
                 )
@@ -55,13 +55,13 @@ const Carrossel = () => {
                 return (
                   <>
                   <Card  key={curso.id}>
-                    <Card.Img variant="top" src={curso.imagem} alt={curso.title} title={curso.title} />
                     <Card.Body>
                       <Card.Title>{curso.titulo}</Card.Title>
                       <Card.Text>
                         {curso.descricao}
                       </Card.Text>
                     </Card.Body>
+                    <Card.Img variant="top" src={curso.imagem} alt={curso.title} title={curso.title} />
                   </Card>
                   </>
               )
