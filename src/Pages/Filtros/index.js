@@ -2,7 +2,7 @@ import Swal from 'sweetalert2';
 import api from '../../services/index';
 import './style.scss';
 import { useEffect, useState } from 'react';
-import { Container, CardGroup, Card, Button  } from 'react-bootstrap';
+import { Container, Card, Button  } from 'react-bootstrap';
 import { useParams, Link } from 'react-router-dom';
 
 
@@ -42,7 +42,7 @@ const Filtros = () => {
                 {categorias.descricao}
                 <p>Preço R$ <span className="price">{categorias.preco}</span> </p>
               </Card.Text>
-              <Button as={Link} to={`/carrinho/${categorias.titulo}`} variant="success" className="btn" >Adicionar ao Carrinho</Button>
+              <Button as={Link} to={`/carrinho/$`} variant="success" className="btn" >Adicionar ao Carrinho</Button>
             </Card.Body>
           </Card>
         ))}
