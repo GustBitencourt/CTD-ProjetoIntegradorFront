@@ -1,7 +1,7 @@
 import Swal from 'sweetalert2';
 import api from '../../services/index';
 import { useEffect, useState } from 'react';
-import { Container, ListGroup } from 'react-bootstrap';
+import { Container, ListGroup, CardGroup  } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 
 
@@ -32,16 +32,18 @@ const Filtros = () => {
 
   return (
     <Container as="section">
-      {filtros.map(categorias => (
-        <ListGroup as="ul" className="col-xl-4 col-lg-6 col-6" key={categorias.id}>
+      <CardGroup>
+        {filtros.map(categorias => (
+          <ListGroup as="ul" className="col-xl-4 col-lg-6 col-6" key={categorias.id}>
 
-          <ListGroup.Item as="li"><img src={categorias.imagem} alt={`Foto do ${categorias.titulo}`} title={categorias.titulo} /></ListGroup.Item>
-          <ListGroup.Item as="li">Titulo: {categorias.titulo}</ListGroup.Item>
-          <ListGroup.Item as="li">Preço: {categorias.preco}</ListGroup.Item>
-          <ListGroup.Item as="li">Descrição: {categorias.descricao}</ListGroup.Item>
-          <ListGroup.Item as="li">Categoria: {categorias.categoria.nome}</ListGroup.Item>
-        </ListGroup>
-      ))}
+            <ListGroup.Item as="li"><img className="Curso" src={categorias.imagem} alt={`Foto do ${categorias.titulo}`} title={categorias.titulo} /></ListGroup.Item>
+            <ListGroup.Item as="li">Titulo: {categorias.titulo}</ListGroup.Item>
+            <ListGroup.Item as="li">Preço: {categorias.preco}</ListGroup.Item>
+            <ListGroup.Item as="li">Descrição: {categorias.descricao}</ListGroup.Item>
+            <ListGroup.Item as="li">Categoria: {categorias.categoria.nome}</ListGroup.Item>
+          </ListGroup>
+        ))}
+      </CardGroup>
     </Container>
   )
 }
