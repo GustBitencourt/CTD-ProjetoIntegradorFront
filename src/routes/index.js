@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Home from '../Pages/Home';
 import Categorias from '../Pages/Categorias';
+import Sobrenos from '../Pages/Sobre';
 import NotFound from '../Pages/NotFound';
 import Produtos from '../Pages/Produtos';
 import Detalhes from '../Pages/Detalhes';
@@ -20,6 +21,7 @@ const RouteList = () => (
         <Route path="cursos/:cursoName" element={<Detalhes />} />
         <Route path="*" element={<NotFound />} />
         <Route path="categorias/:categoriaName" element={<Filtros />} />
+        <Route path="/sobre" element={<Sobrenos />} />
       </Routes>
     <Footer />
     </CursoContextProvider>
