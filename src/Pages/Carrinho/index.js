@@ -1,6 +1,6 @@
-import {  ListGroup } from 'react-bootstrap';
+import { Container, Card, Button } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import api from '../../services/index';
@@ -35,17 +35,21 @@ const Carrinho = () => {
       <Helmet>
         <title>CTD - Educational | {cursos[0] ? cursos[0].titulo : 'Home'}</title>
       </Helmet>
-      
-      {cursos.map(produtos => (
-        <ListGroup as="ul" className="col-xl-4 col-lg-6 col-6" key={produtos.id}>
 
-          <ListGroup.Item as="li"><img className="Curso" src={produtos.imagem} alt={`Foto do ${produtos.titulo}`} title={produtos.titulo} /></ListGroup.Item>
-          <ListGroup.Item as="li">Titulo: {produtos.titulo}</ListGroup.Item>
-          <ListGroup.Item as="li">Preço: {produtos.preco}</ListGroup.Item>
-          <ListGroup.Item as="li">Descrição: {produtos.descricao}</ListGroup.Item>
-          <ListGroup.Item as="li">Categoria: {produtos.categoria.nome}</ListGroup.Item>
-        </ListGroup>
+      <Container className="carrinho__container">
+      {cursos.map(produtos => (
+          <Card style={{ width: '18rem', margin: '20px' }} key={produtos.id}>
+            <Card.Img variant="top" src={produtos.imagem} alt={produtos.titulo} title={produtos.titulo} />
+            <Card.Body className="align-center">
+              <Card.Title>{produtos.titulo}</Card.Title>
+              <Card.Text>
+                {produtos.descricao} 
+                <p>Preço R$ <span className="price">{produtos.preco}</span> </p>
+              </Card.Text>
+            </Card.Body>
+          </Card>
       ))}
+      </Container>
     </>
   )
 }

@@ -40,6 +40,7 @@ const Filtros = () => {
               <Card.Title>{categorias.titulo}</Card.Title>
               <Card.Text>
                 {categorias.descricao}
+                <p>Preço R$ <span className="price">{categorias.preco}</span> </p>
               </Card.Text>
               <Button as={Link} to={`/carrinho`} variant="success" className="btn" >Adicionar ao Carrinho</Button>
             </Card.Body>

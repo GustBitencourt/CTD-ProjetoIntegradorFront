@@ -45,9 +45,10 @@ const Produtos = () => {
                 <Card style={{ width: '18rem', margin: '20px' }} key={curso.id}>
                   <Card.Img variant="top" src={curso.imagem} alt={curso.titulo} title={curso.titulo} />
                   <Card.Body className="align-center">
-                    <Card.Title>{curso.titulo}</Card.Title>
+                    <Card.Title>{curso.titulo} {produtos.preco}</Card.Title>
                     <Card.Text>
-                      {curso.descricao}
+                      {curso.descricao} 
+                      <p>Preço R$ <span className="price">{curso.preco}</span> </p>
                     </Card.Text>
                     <Button as={Link} to={`/carrinho`} variant="success" className="btn" >Adicionar ao Carrinho</Button>
                   </Card.Body>

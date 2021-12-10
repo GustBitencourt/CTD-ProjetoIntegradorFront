@@ -1,5 +1,6 @@
 import Swal from 'sweetalert2';
 import api from '../../services/index';
+import { Helmet } from 'react-helmet';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import { Button, Container, Col} from 'react-bootstrap';
@@ -29,11 +30,14 @@ const Categorias = () => {
   const firstCapitalize = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
-  
-
 
   return (
     <>
+      <Helmet>
+        <title>
+          CTD - Educational | Categorias
+        </title>
+      </Helmet>
       <section id="sectionCategoria">
         <Container sm={{span:10, offset: 1}} className="mt-4">
           <Col id="colButton">

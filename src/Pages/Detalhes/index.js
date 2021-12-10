@@ -50,6 +50,7 @@ const Detalhes = () => {
                 <Card.Title>{produtos.titulo}</Card.Title>
                 <Card.Text>
                   {produtos.descricao}
+                  <p>Preço R$ <span className="price">{produtos.preco}</span> </p>
                 </Card.Text>
                 <Button as={Link} to={`/carrinho`} variant="success" className="btn" >Adicionar ao Carrinho</Button>
               </Card.Body>
