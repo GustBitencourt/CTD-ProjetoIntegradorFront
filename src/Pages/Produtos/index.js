@@ -3,8 +3,9 @@ import { Helmet } from 'react-helmet';
 import Swal from 'sweetalert2';
 import api from '../../services/index';
 import { useEffect, useState, useContext} from 'react';
-import { Container, Col,ListGroup } from 'react-bootstrap';
+import { Container, Col,ListGroup, CardGroup } from 'react-bootstrap';
 import {CursoContext } from '../../contexts/CursoContext'
+import './style.scss';
 
 const Produtos = () => {
   const [produtos, setProdutos] = useState([]);
@@ -37,11 +38,12 @@ const Produtos = () => {
         </title>
       </Helmet>
       <Container>
-        <Col>
+        <Col >
+        <CardGroup>
           {produtos.map(curso => (
-            <ListGroup as="ul" className="col-xl-4 col-lg-6 col-6" key={curso.id}>
+            <ListGroup as="ul" className=" col-xl-4 col-lg-6 col-6" key={curso.id}>
 
-              <ListGroup.Item as="li"><img src={curso.imagem} alt={`Foto do ${curso.titulo}`} title={curso.titulo} /></ListGroup.Item>
+              <ListGroup.Item as="li"><img className="Curso" src={curso.imagem} alt={`Foto do ${curso.titulo}`} title={curso.titulo} /></ListGroup.Item>
               <ListGroup.Item as="li">Titulo: {curso.titulo}</ListGroup.Item>
               <ListGroup.Item as="li">Preço: {curso.preco}</ListGroup.Item>
               <ListGroup.Item as="li">Descrição: {curso.descricao}</ListGroup.Item>
@@ -50,6 +52,7 @@ const Produtos = () => {
 
             </ListGroup>
           ))}
+        </CardGroup>  
         </Col>
       </Container>
     </>
