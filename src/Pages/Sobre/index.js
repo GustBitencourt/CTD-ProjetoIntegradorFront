@@ -1,14 +1,17 @@
 import './style.scss';
-import { Card, CardGroup, Button } from 'react-bootstrap';
-import felipe from '../../images/felipe.jpg'
-
-
+import { Card, CardGroup } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 
 const Sobrenos = () => {
 
   return (
     <>
-      <CardGroup>
+      <Helmet>
+        <title>
+          CTD - Educational | Sobre Nós
+        </title>
+      </Helmet>
+      <CardGroup className="about__container">
         <Card style={{ width: '18rem' }}>
           <Card.Img variant="top" src="https://avatars.githubusercontent.com/u/85718153?v=4" alt="Felipe Rodrigues" />
           <Card.Body>
