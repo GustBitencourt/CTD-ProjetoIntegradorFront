@@ -1,11 +1,10 @@
-import {  ListGroup, Button, Card, Container } from 'react-bootstrap';
+import {  Card, Container } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
 import { useContext, useEffect, useState } from 'react';
 import { useParams} from 'react-router-dom';
 import { CursoContext } from '../../contexts/CursoContext';
 import Swal from 'sweetalert2';
 import api from '../../services/index';
-import { Link } from 'react-router-dom';
 
 const Carrinho = () => {
   const [curso, setCursos] = useState([]);

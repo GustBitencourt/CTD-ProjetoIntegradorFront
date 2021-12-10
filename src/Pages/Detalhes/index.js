@@ -1,9 +1,8 @@
 import { Helmet } from 'react-helmet';
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import { Button, Container, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { CursoContext } from '../../contexts/CursoContext';
 import api from '../../services/index';
 import Swal from 'sweetalert2';
 import './style.scss';

@@ -2,9 +2,8 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Swal from 'sweetalert2';
 import api from '../../services/index';
-import { useEffect, useState, useContext } from 'react';
-import { Container, Col, ListGroup, CardGroup, Card, Button } from 'react-bootstrap';
-import { CursoContext } from '../../contexts/CursoContext'
+import { useEffect, useState} from 'react';
+import { Container, Col, CardGroup, Card, Button } from 'react-bootstrap';
 import './style.scss';
 
 const Produtos = () => {
