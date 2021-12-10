@@ -35,7 +35,7 @@ const Categorias = () => {
   return (
     <>
       <section id="sectionCategoria">
-        <Container sm={{span:10, offset: 1}}>
+        <Container sm={{span:10, offset: 1}} className="my-5">
           <Col id="colButton">
             <h2>Categorias</h2>
             {categoria.map(nomeCategoria => (
