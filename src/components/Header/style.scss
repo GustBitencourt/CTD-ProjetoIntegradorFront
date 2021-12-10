@@ -6,17 +6,29 @@
 
 h1 {
    font-size: 1.5rem;
-   transition: ease-in-out .8s;   
+   color: #b9b2b2; 
+   transition: ease-in-out .8s;
+
+   &:hover {
+      color: #9d4edd;   
+   }
 }
 
-h1:hover {
-   color: #9d4edd;   
+#basic-nav-dropdown {
+   color: #b9b2b2; 
+   transition: ease-in-out .8s;
+
+   &:hover {
+      color: #9d4edd; 
+   }
 }
 
 .navs {
    transition: ease-in-out .8s;
-}
+   color: #b9b2b2!important;
 
-.navs:hover {
-   font-weight: 700;
+   &:hover {
+      font-weight: 700;
+      color: #9d4edd!important; 
+   }
 }

@@ -1,4 +1,9 @@
-footer {
-    display:flex;
+#footer {
+    width: 100%;
     justify-content: center;
+    text-align: center;
+    background-color: #212529;
+    position: sticky;
+    padding: 0.5rem;
+    color: #efefef
 }

@@ -21,7 +21,7 @@ const RouteList = () => (
         <Route path="*" element={<NotFound />} />
         <Route path="categorias/:categoriaName" element={<Filtros />} />
       </Routes>
-    <Footer />
+      <Footer />
     </CursoContextProvider>
   </BrowserRouter>
 );

@@ -13,7 +13,7 @@ const Banner = () => {
                     Bem vindo ao <h1><span className="info-name">CTD-Educational</span></h1><br />
                     Os melhores cursos de Tecnologia! <br />
                     Liberdade para você estudar de onde estiver.</p>
-                    <Button variant="primary" as={Link} to={"/cursos"} className="button">
+                    <Button id="butto__banner" as={Link} to={"/cursos"} className="button">
                         Acessar Cursos
                     </Button>
                 </Col>
