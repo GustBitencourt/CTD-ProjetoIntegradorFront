@@ -35,13 +35,10 @@ const Categorias = () => {
   return (
     <>
       <section id="sectionCategoria">
-        <Container sm={{span:10, offset: 1}} className="my-5">
+        <Container sm={{span:10, offset: 1}} className="mt-4">
           <Col id="colButton">
             <h2>Categorias</h2>
             {categoria.map(nomeCategoria => (
-              /*       <ul className="col-xl-4 col-lg-6 col-6" key={d.id}>
-                      <li>Nome: {d.nome}</li>
-                    </ul> */
               <Button id="button__categorias" as={Link} to={`/categorias/${nomeCategoria.nome}`} className="button" key={nomeCategoria.id}>
                {firstCapitalize(nomeCategoria.nome)}
               </Button>

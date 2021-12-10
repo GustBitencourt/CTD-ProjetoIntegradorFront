@@ -11,7 +11,7 @@ const Footer = () => {
 
     return (
         <footer id="footer">
-            <h3>{nomeCompanhia} - Todos os direitos reservados. &copy; Copyright {generateDateString()}</h3>
+            <h3><span className="info-name">{nomeCompanhia}</span> - Todos os direitos reservados. &copy;  {generateDateString()}</h3>
         </footer>
     )
 }
