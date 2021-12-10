@@ -1,14 +1,10 @@
-#selectContainer {
-  width: 20%;
-}
-.flex{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+.curso__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
-.Curso {
-  width: 270px;
-  height: 200px;
+  .price {
+    color: #212529;
+    background-color: #9d4edd;       
+  }
 }

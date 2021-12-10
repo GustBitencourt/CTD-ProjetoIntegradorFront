@@ -1,24 +1,28 @@
-.git{
-   width: 40px;
-   height: 40px;
-   margin: 10px;
+.wrapper__about{
+   height: 100vh;
+   .git{
+      width: 40px;
+      height: 40px;
+      margin: 10px;
+   }
+   .git:hover{
+      width: 40px;
+      height: 40px;
+      margin: 10px;
+      background-color: rgba(34, 32, 32, 0.657);
+      border-radius: 50%;
+   }
+   .linkedin{
+      width: 40px;
+      height: 40px;
+      margin: 10px;
+   }
+   .linkedin:hover{
+      width: 40px;
+      height: 40px;
+      margin: 10px;
+      background-color: rgba(34, 32, 32, 0.657);
+      border-radius: 50%;
+   }
 }
-.git:hover{
-   width: 40px;
-   height: 40px;
-   margin: 10px;
-   background-color: rgba(34, 32, 32, 0.657);
-   border-radius: 50%;
-}
-.linkedin{
-   width: 40px;
-   height: 40px;
-   margin: 10px;
-}
-.linkedin:hover{
-   width: 40px;
-   height: 40px;
-   margin: 10px;
-   background-color: rgba(34, 32, 32, 0.657);
-   border-radius: 50%;
-}
+

@@ -1,14 +1,12 @@
-import { ListGroup } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
 import { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
+import { Button, Container, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { CursoContext } from '../../contexts/CursoContext';
 import api from '../../services/index';
 import Swal from 'sweetalert2';
 import './style.scss';
-
 
 
 const Detalhes = () => {
@@ -39,21 +37,25 @@ const Detalhes = () => {
       <Helmet>
         <title>CTD - Educational | {cursoName}</title>
       </Helmet>
-      <div className="Detalhes">
-        {curso && (
-          <ListGroup as="ul" className="Flex col-xl-4 col-lg-6 col-6" key={curso.id}>
 
-            <ListGroup.Item as="li"><img className="Curso" src={curso.imagem} alt={`Foto do ${curso.titulo}`} title={curso.titulo} /></ListGroup.Item>
-            <ListGroup.Item as="li">Titulo: {curso.titulo}</ListGroup.Item>
-            <ListGroup.Item as="li">Preço: {curso.preco}</ListGroup.Item>
-            <ListGroup.Item as="li">Descrição: {curso.descricao}</ListGroup.Item>
-            <ListGroup.Item as="li">Categoria: {curso.categoria.nome}</ListGroup.Item>
-            <Button className="btn" to={`/carrinho/${curso.titulo}`} as={Link}>Adicionar ao Carrinho</Button>
-          </ListGroup>
-        )}
-      </div>
+      <Container className="Detalhes">
+        <Container as="ul" className="Flex col-xl-4 col-lg-6 col-6">
+          {curso && (
+            <Card style={{ width: '18rem' }} key={curso.id}>
+              <Card.Img variant="top" src={curso.imagem} alt={curso.titulo} title={curso.titulo} />
+              <Card.Body className="align-center">
+                <Card.Title>{curso.titulo}</Card.Title>
+                <Card.Text>
+                  {curso.descricao}
+                  <p>Preço R$ <span className="price">{curso.preco}</span> </p>
+                </Card.Text>
+                <Button as={Link} to={`/carrinho/${curso.titulo}`} variant="success" className="btn" >Adicionar ao Carrinho</Button>
+              </Card.Body>
+            </Card>
+          )}
+          </Container>
+      </Container>
     </>
   )
 }
 export default Detalhes;
-

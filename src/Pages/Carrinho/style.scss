@@ -1,0 +1,10 @@
+.carrinho__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .price {
+        color: #212529;
+        background-color: #9d4edd;       
+    }
+}
