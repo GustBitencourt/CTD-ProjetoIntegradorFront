@@ -10,6 +10,7 @@ import './style.scss';
 const Produtos = () => {
   const [produtos, setProdutos] = useState([]);
   
+  
 
   useEffect(() => {
     async function loadProdutos() {

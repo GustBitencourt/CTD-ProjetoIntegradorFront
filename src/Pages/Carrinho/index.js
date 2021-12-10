@@ -1,52 +1,54 @@
-import {  ListGroup } from 'react-bootstrap';
+import {  ListGroup, Button } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
-import { useEffect, useState, useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import { useContext, useEffect, useState } from 'react';
+import { useParams} from 'react-router-dom';
+import { CursoContext } from '../../contexts/CursoContext';
 import Swal from 'sweetalert2';
 import api from '../../services/index';
-
+import { Link } from 'react-router-dom';
 
 const Carrinho = () => {
-  const [cursos, setCursos] = useState([]);
-  const { cursoName } = useParams();
+  const [curso, setCursos] = useState([]);
+  const { addCurso } = useContext(CursoContext);
+  const { compraName } = useParams();
 
   useEffect(() => {
-    if (cursoName) {
-      getCursoData({ tituloProduto: cursoName });
-    };
-  }, [cursoName])
-
-  const getCursoData = async ({ tituloProduto }) => {
-    try {
-      const response = await api.get(`/produtos/${tituloProduto}`);
-      setCursos(response.data);
-      console.log(response.data)
-    } catch (error) {
-      Swal.fire({
-        title: error.response.status,
-        icon: 'error',
-        text: error.response.data.message
-      })
+    async function loadProdutos() {
+      try {
+        const response = await api.get(`/produtos/${compraName}`);
+        console.log(response.data);
+        setCursos(response.data);
+        addCurso(response.data[0])
+      } catch (error) {
+        Swal.fire({
+          title: error.response.status,
+          icon: 'error',
+          text: error.response.data.message
+        })
+      }
     }
-  }
+
+    loadProdutos();
+  }, [])
 
   return (
     <>
       <Helmet>
-        <title>CTD - Educational | {cursos[0] ? cursos[0].titulo : 'Home'}</title>
+        <title>CTD - Educational | {compraName}</title>
       </Helmet>
-      
-      {cursos.map(produtos => (
-        <ListGroup as="ul" className="col-xl-4 col-lg-6 col-6" key={produtos.id}>
+      <div className="Detalhes">
+        {curso.map(produto => (
+          <ListGroup as="ul" className="Flex col-xl-4 col-lg-6 col-6" key={produto.id}>
 
-          <ListGroup.Item as="li"><img className="Curso" src={produtos.imagem} alt={`Foto do ${produtos.titulo}`} title={produtos.titulo} /></ListGroup.Item>
-          <ListGroup.Item as="li">Titulo: {produtos.titulo}</ListGroup.Item>
-          <ListGroup.Item as="li">Preço: {produtos.preco}</ListGroup.Item>
-          <ListGroup.Item as="li">Descrição: {produtos.descricao}</ListGroup.Item>
-          <ListGroup.Item as="li">Categoria: {produtos.categoria.nome}</ListGroup.Item>
-        </ListGroup>
-      ))}
+            <ListGroup.Item as="li"><img className="Curso" src={produto.imagem} alt={`Foto do ${produto.titulo}`} title={produto.titulo} /></ListGroup.Item>
+            <ListGroup.Item as="li">Titulo: {produto.titulo}</ListGroup.Item>
+            <ListGroup.Item as="li">Preço: {produto.preco}</ListGroup.Item>
+            <ListGroup.Item as="li">Descrição: {produto.descricao}</ListGroup.Item>
+            <ListGroup.Item as="li">Categoria: {produto.categoria.nome}</ListGroup.Item>
+          </ListGroup>
+        ))}
+      </div>
     </>
   )
 }
-export default Carrinho;
+export default Carrinho; 
