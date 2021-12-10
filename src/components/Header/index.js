@@ -20,9 +20,9 @@ const Header = () => {
             >
               <Nav.Link className="navs" as={Link} to={"/categorias"}>Categorias</Nav.Link>
 
-              <Nav.Link as={Link} to={"/cursos"}>Cursos</Nav.Link>
+              <Nav.Link as={Link} to={"/curso"}>Cursos</Nav.Link>
 
-              <Nav.Link as={Link} to={"/cursos"}>Sobre Nós</Nav.Link>
+              <Nav.Link as={Link} to={"/curso"}>Sobre Nós</Nav.Link>
             </Nav>
 
             <Nav>

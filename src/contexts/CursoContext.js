@@ -6,7 +6,7 @@ import { cursoReducer } from '../reducers/cursoReducer';
 
  const CursoContextProvider = ({children}) =>{
      const[cursos, dispatch] = useReducer(cursoReducer, [],()=>{
-        const localData = localStorage.getItem('curso');
+        const localData = localStorage.getItem('cursos');
         return localData ? JSON.parse(localData) : [];
      });
      useEffect(()=>{
