@@ -1,3 +1,5 @@
+
+
 #sectionCategoria {
     height: 100vh    
 }
@@ -11,5 +13,12 @@
         width: 12rem;
         margin: 1rem;
         border-radius: 1rem;
+        transition: ease-in-out .8s;
+        background-color: #212529!important;
+
+        &:hover {
+            font-weight: 700;
+            background-color: #9d4edd!important;
+        }
     }
 }
