@@ -39,7 +39,7 @@ const Carrinho = () => {
       {cursos.map(produtos => (
         <ListGroup as="ul" className="col-xl-4 col-lg-6 col-6" key={produtos.id}>
 
-          <ListGroup.Item as="li"><img src={produtos.imagem} alt={`Foto do ${produtos.titulo}`} title={produtos.titulo} /></ListGroup.Item>
+          <ListGroup.Item as="li"><img className="Curso" src={produtos.imagem} alt={`Foto do ${produtos.titulo}`} title={produtos.titulo} /></ListGroup.Item>
           <ListGroup.Item as="li">Titulo: {produtos.titulo}</ListGroup.Item>
           <ListGroup.Item as="li">Preço: {produtos.preco}</ListGroup.Item>
           <ListGroup.Item as="li">Descrição: {produtos.descricao}</ListGroup.Item>
