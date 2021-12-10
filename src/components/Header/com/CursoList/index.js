@@ -11,7 +11,7 @@ const CursoList = () => {
       <NavDropdown.Item key={curso.id} as={Link} to={`/carrinho/${curso.titulo}`}>{curso.titulo}</NavDropdown.Item>
     ))
   ) : (
-    <NavDropdown.Item>Não nenhum curso aqui</NavDropdown.Item>
+    <NavDropdown.Item >Nenhum Item aqui</NavDropdown.Item>
   )
 }
 
