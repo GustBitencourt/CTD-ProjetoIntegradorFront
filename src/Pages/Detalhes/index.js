@@ -51,7 +51,7 @@ const Detalhes = () => {
                 <Card.Text>
                   {produtos.descricao}
                 </Card.Text>
-                <Button variant="success" className="align-center" >Adicionar ao Carrinho</Button>
+                <Button as={Link} to={`/carrinho`} variant="success" className="btn" >Adicionar ao Carrinho</Button>
               </Card.Body>
             </Card>
         </Container>
