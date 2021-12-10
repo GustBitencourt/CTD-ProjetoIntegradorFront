@@ -27,7 +27,7 @@ const Carrossel = () => {
 
   return (
     <>
-      <Container className="my-7">
+      <Container className="my-5">
         <h2>Em Destaque</h2>
         <Carousel variant="dark">
           <Carousel.Item interval={1500}>

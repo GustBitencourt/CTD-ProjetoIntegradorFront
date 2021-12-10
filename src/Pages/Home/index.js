@@ -1,5 +1,5 @@
 import Carrossel from './components/Carrossel';
-import Card from './components/Card';
+import Valores from './components/Valores';
 import Banner from './components/Banner';
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
       <>
         <Banner />
         <Carrossel />
-        <Card />
+        <Valores />
       </>
     );
   }
