@@ -25,7 +25,7 @@ const RouteList = () => (
         <Route path="categorias/:categoriaName" element={<Filtros />} />
         <Route path="/sobre" element={<Sobrenos />} />
       </Routes>
-    <Footer />
+      <Footer />
     </CursoContextProvider>
   </BrowserRouter>
 );

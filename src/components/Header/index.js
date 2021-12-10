@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <header>
-      <Navbar bg="ligh" expand="lg">
+      <Navbar bg="dark" expand="lg">
         <Container fluid>
           <Navbar.Brand as={Link} to={"/"} ><h1>CTD - Educational</h1></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
@@ -20,13 +20,13 @@ const Header = () => {
             >
               <Nav.Link className="navs" as={Link} to={"/categorias"}>Categorias</Nav.Link>
 
-              <Nav.Link as={Link} to={"/curso"}>Cursos</Nav.Link>
+              <Nav.Link className="navs" as={Link} to={"/cursos"}>Cursos</Nav.Link>
 
-              <Nav.Link as={Link} to={"/sobre"}>Sobre Nós</Nav.Link>
+              <Nav.Link className="navs" as={Link} to={"/cursos"}>Sobre Nós</Nav.Link>
             </Nav>
 
             <Nav>
-              <NavDropdown title="Carrinho" id="basic-nav-dropdown">
+              <NavDropdown title="Carrinho" bg="White" id="basic-nav-dropdown">
                 <CursoList />
               </NavDropdown>
             </Nav>
